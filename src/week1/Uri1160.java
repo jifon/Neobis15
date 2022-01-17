@@ -1,15 +1,6 @@
 package week1;
 
-<<<<<<< HEAD
-import java.text.NumberFormat;
-import java.text.ParseException;
-import java.util.Locale;
-import java.util.Scanner;
 
-public class Uri1160{
-    public static void main(String[] args) throws ParseException {
-
-=======
 import java.util.Scanner;
 
 public class Uri1160{
@@ -43,13 +34,6 @@ public class Uri1160{
                 System.out.println(century + " anos.");
             }
         }
->>>>>>> 1f598ec ("Last solution")
     }
 }
 
-
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 1f598ec ("Last solution")
