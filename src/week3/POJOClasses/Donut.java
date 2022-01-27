@@ -1,31 +1,26 @@
 package week3.POJOClasses;
 
-public class Donut extends Product {
+public class Donut extends Dessert {
 
-    private String glaze;
-    private String filling;
-    private String powder;
+    private Glaze glaze;
 
-    public Donut(String glaze, String filling) {
+    public Donut(Long productID, String name, String dateOfManifacture, String expiryDate, Filling filling, Powder powder, Sweeteners sweeteners, Glaze glaze) {
+        super(productID, name, dateOfManifacture, expiryDate, filling, powder, sweeteners);
         this.glaze = glaze;
-        this.filling = filling;
     }
 
-    public String getGlaze() {
+    public Donut(Glaze glaze) {
+        this.glaze = glaze;
+    }
+
+    public Donut() {
+    }
+
+    public Glaze getGlaze() {
         return glaze;
     }
 
-    public void setGlaze(String glaze) {
+    public void setGlaze(Glaze glaze) {
         this.glaze = glaze;
     }
-
-    public String getFilling() {
-        return filling;
-    }
-
-    public void setFilling(String filling) {
-        this.filling = filling;
-    }
-
-
 }

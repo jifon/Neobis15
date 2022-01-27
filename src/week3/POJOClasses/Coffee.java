@@ -1,7 +1,6 @@
 package week3.POJOClasses;
 
 
-
 public class Coffee extends Product{
 
     private CoffeeSize coffeeSize;
@@ -10,6 +9,15 @@ public class Coffee extends Product{
     private Double cost;
     private Sweeteners sweeteners;
 
+
+    public Coffee(Long productID, String name, String dateOfManifacture, String expiryDate, CoffeeSize coffeeSize, Integer brewStrength, MilkType milkType, Double cost, Sweeteners sweeteners) {
+        super(productID, name, dateOfManifacture, expiryDate);
+        this.coffeeSize = coffeeSize;
+        this.brewStrength = brewStrength;
+        this.milkType = milkType;
+        this.cost = cost;
+        this.sweeteners = sweeteners;
+    }
 
     public Coffee(CoffeeSize coffeeSize, Integer brewStrength, MilkType milkType, Double cost, Sweeteners sweeteners) {
         this.coffeeSize = coffeeSize;

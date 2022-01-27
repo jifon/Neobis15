@@ -1,21 +1,24 @@
 package week3.POJOClasses;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class CoffeeShop {
 
     private Integer coffeeShopID;
     private String name;
-    private String Address;
+    private String address;
     private Integer colOdEmp;
     private int phoneNumber;
+    private ArrayList<Product> basket;
 
     public CoffeeShop(Integer coffeeShopID, String name, String address, Integer colOdEmp, int phoneNumber) {
         this.coffeeShopID = coffeeShopID;
         this.name = name;
-        Address = address;
+        this.address = address;
         this.colOdEmp = colOdEmp;
         this.phoneNumber = phoneNumber;
+        this.basket = new ArrayList<Product>();
     }
 
     public CoffeeShop() {
@@ -38,11 +41,11 @@ public class CoffeeShop {
     }
 
     public String getAddress() {
-        return Address;
+        return address;
     }
 
     public void setAddress(String address) {
-        Address = address;
+        this.address = address;
     }
 
     public Integer getColOdEmp() {
