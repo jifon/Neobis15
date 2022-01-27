@@ -6,24 +6,21 @@ public class Coffee extends Product{
     private CoffeeSize coffeeSize;
     private Integer brewStrength;
     private MilkType milkType;
-    private Double cost;
     private Sweeteners sweeteners;
 
 
-    public Coffee(Long productID, String name, String dateOfManifacture, String expiryDate, CoffeeSize coffeeSize, Integer brewStrength, MilkType milkType, Double cost, Sweeteners sweeteners) {
+    public Coffee(Long productID, String name, String dateOfManifacture, String expiryDate, CoffeeSize coffeeSize, Integer brewStrength, MilkType milkType,  Sweeteners sweeteners) {
         super(productID, name, dateOfManifacture, expiryDate);
         this.coffeeSize = coffeeSize;
         this.brewStrength = brewStrength;
         this.milkType = milkType;
-        this.cost = cost;
         this.sweeteners = sweeteners;
     }
 
-    public Coffee(CoffeeSize coffeeSize, Integer brewStrength, MilkType milkType, Double cost, Sweeteners sweeteners) {
+    public Coffee(CoffeeSize coffeeSize, Integer brewStrength, MilkType milkType,  Sweeteners sweeteners) {
         this.coffeeSize = coffeeSize;
         this.brewStrength = brewStrength;
         this.milkType = milkType;
-        this.cost = cost;
         this.sweeteners = sweeteners;
     }
 
@@ -52,14 +49,6 @@ public class Coffee extends Product{
 
     public void setMilkType(MilkType milkType) {
         this.milkType = milkType;
-    }
-
-    public Double getCost() {
-        return cost;
-    }
-
-    public void setCost(Double cost) {
-        this.cost = cost;
     }
 
     public Sweeteners getSweeteners() {
