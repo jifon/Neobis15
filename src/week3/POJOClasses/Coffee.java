@@ -7,18 +7,13 @@ public class Coffee {
     private double cost;
 
 
-    public Coffee(int brewStrength, boolean sugar, String milkType) {
+    public Coffee(int brewStrength, boolean sugar, String milkType, double cost) {
         this.brewStrength = brewStrength;
         this.sugar = sugar;
         this.milkType = milkType;
-        switch (milkType){
-            case "cow":
-                this.cost = (brewStrength * 50) + (sugar? 50 : 0) + 30;
-            case "coconut":
-                this.cost = (brewStrength * 50) + (sugar? 50 : 0) + 50;
-            default:
-                this.cost = (brewStrength * 50) + (sugar? 50 : 0) + 0;
-        }
+        this.cost = cost;
+
+
     }
 
     public Coffee(){};
@@ -55,13 +50,5 @@ public class Coffee {
         this.milkType = milkType;
     }
 
-    @Override
-    public String toString() {
-        String s = "Coffee {"
-                + "brewStrength='" + this.brewStrength + '\''
-                + "sugar='" + this.sugar + '\''
-                + ", milkType=" + this.milkType
-                + '}';
-        return s;
-    }
+
 }

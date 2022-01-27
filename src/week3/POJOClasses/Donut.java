@@ -4,11 +4,12 @@ public class Donut {
 
     private String glaze;
     private String filling;
-    final double cost = 5.50;
+    private double cost ;
 
-    public Donut(String glaze, String filling) {
+    public Donut(String glaze, String filling, double cost) {
         this.glaze = glaze;
         this.filling = filling;
+        this.cost = cost;
     }
 
     public String getGlaze() {
@@ -31,4 +32,7 @@ public class Donut {
         return cost;
     }
 
+    public void setCost(double cost) {
+        this.cost = cost;
+    }
 }
