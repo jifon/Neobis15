@@ -4,13 +4,18 @@ import java.util.ArrayList;
 
 public class Customer {
 
+    private Long custumerID;
     private String name;
-    private int numberOfCard;
+    private String numberOfCard;
     private String codeOfCard;
-    private ArrayList<Object> basket = new ArrayList<>();
+    private ArrayList<Product> orders = new ArrayList<>();
 
-    public Customer(String name) {
+    public Customer(Long custumerID, String name, String numberOfCard, String codeOfCard, ArrayList<Product> orders) {
+        this.custumerID = custumerID;
         this.name = name;
+        this.numberOfCard = numberOfCard;
+        this.codeOfCard = codeOfCard;
+        this.orders = orders;
     }
 
     public Customer() {
@@ -24,11 +29,11 @@ public class Customer {
         this.name = name;
     }
 
-    public int getNumberOfCard() {
+    public String getNumberOfCard() {
         return numberOfCard;
     }
 
-    public void setNumberOfCard(int numberOfCard) {
+    public void setNumberOfCard(String numberOfCard) {
         this.numberOfCard = numberOfCard;
     }
 
@@ -40,11 +45,5 @@ public class Customer {
         this.codeOfCard = codeOfCard;
     }
 
-    public ArrayList<Object> getBasket() {
-        return basket;
-    }
 
-    public void setBasket(ArrayList<Object> basket) {
-        this.basket = basket;
-    }
 }

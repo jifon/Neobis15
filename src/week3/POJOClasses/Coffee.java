@@ -1,54 +1,66 @@
 package week3.POJOClasses;
 
-public class Coffee {
-    private int brewStrength;
-    private boolean sugar;
-    private String milkType;
-    private double cost;
 
 
-    public Coffee(int brewStrength, boolean sugar, String milkType, double cost) {
+public class Coffee extends Product{
+
+    private CoffeeSize coffeeSize;
+    private Integer brewStrength;
+    private MilkType milkType;
+    private Double cost;
+    private Sweeteners sweeteners;
+
+
+    public Coffee(CoffeeSize coffeeSize, Integer brewStrength, MilkType milkType, Double cost, Sweeteners sweeteners) {
+        this.coffeeSize = coffeeSize;
         this.brewStrength = brewStrength;
-        this.sugar = sugar;
         this.milkType = milkType;
         this.cost = cost;
-
-
+        this.sweeteners = sweeteners;
     }
 
     public Coffee(){};
 
-    public double getCost() {
-        return cost;
+
+    public CoffeeSize getCoffeeSize() {
+        return coffeeSize;
     }
 
-    public void setCost(double cost) {
-        this.cost = cost;
+    public void setCoffeeSize(CoffeeSize coffeeSize) {
+        this.coffeeSize = coffeeSize;
     }
 
-    public int getBrewStrength() {
+    public Integer getBrewStrength() {
         return brewStrength;
     }
 
-    public void setBrewStrength(int brewStrength) {
+    public void setBrewStrength(Integer brewStrength) {
         this.brewStrength = brewStrength;
     }
 
-    public boolean isSugar() {
-        return sugar;
-    }
-
-    public void setSugar(boolean sugar) {
-        this.sugar = sugar;
-    }
-
-    public String getMilkType() {
+    public MilkType getMilkType() {
         return milkType;
     }
 
-    public void setMilkType(String milkType) {
+    public void setMilkType(MilkType milkType) {
         this.milkType = milkType;
     }
 
+    public Double getCost() {
+        return cost;
+    }
 
+    public void setCost(Double cost) {
+        this.cost = cost;
+    }
+
+    public Sweeteners getSweeteners() {
+        return sweeteners;
+    }
+
+    public void setSweeteners(Sweeteners sweeteners) {
+        this.sweeteners = sweeteners;
+    }
 }
+
+

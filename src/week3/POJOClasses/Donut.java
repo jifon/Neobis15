@@ -1,15 +1,14 @@
 package week3.POJOClasses;
 
-public class Donut {
+public class Donut extends Product {
 
     private String glaze;
     private String filling;
-    private double cost ;
+    private String powder;
 
-    public Donut(String glaze, String filling, double cost) {
+    public Donut(String glaze, String filling) {
         this.glaze = glaze;
         this.filling = filling;
-        this.cost = cost;
     }
 
     public String getGlaze() {
@@ -28,11 +27,5 @@ public class Donut {
         this.filling = filling;
     }
 
-    public double getCost() {
-        return cost;
-    }
 
-    public void setCost(double cost) {
-        this.cost = cost;
-    }
 }
