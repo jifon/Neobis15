@@ -9,10 +9,10 @@ public class CoffeeShop {
     private String name;
     private String address;
     private Integer colOdEmp;
-    private int phoneNumber;
+    private String phoneNumber;
     private ArrayList<Product> basket;
 
-    public CoffeeShop(Integer coffeeShopID, String name, String address, Integer colOdEmp, int phoneNumber) {
+    public CoffeeShop(Integer coffeeShopID, String name, String address, Integer colOdEmp, String phoneNumber) {
         this.coffeeShopID = coffeeShopID;
         this.name = name;
         this.address = address;
@@ -56,11 +56,11 @@ public class CoffeeShop {
         this.colOdEmp = colOdEmp;
     }
 
-    public int getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 }
