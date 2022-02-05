@@ -10,9 +10,9 @@ CREATE TABLE product (
     coffee_shop_id INT NOT NULL,
 	product_name VARCHAR(100) NOT NULL,
     cost DOUBLE NOT NULL,
-    date_of_manifacture DATE NOT NULL,
+    date_of_manifacture VARCHAR(50) NOT NULL,
     phone_number VARCHAR(50) NOT NULL,
-    expiry_date DATE NOT NULL
+    expiry_date VARCHAR(50) NOT NULL
 );
 
 CREATE TABLE product_coffee (
@@ -20,12 +20,12 @@ CREATE TABLE product_coffee (
 	product_coffee_id INT  PRIMARY KEY,
 	product_name VARCHAR(100) NOT NULL,
     cost double NOT NULL,
-    date_of_manifacture DATE NOT NULL,
+    date_of_manifacture VARCHAR(50) NOT NULL,
     phone_number VARCHAR(50) NOT NULL,
-    expiry_date DATE NOT NULL,
+    expiry_date VARCHAR(50) NOT NULL,
 	brew_strangth INT NOT NULL,
-    coffee_size VARCHAR(25) NOT NULL, 
-    milk_type VARCHAR(25) NOT NULL,  
+    coffee_size VARCHAR(25) NOT NULL,
+    milk_type VARCHAR(25) NOT NULL,
     sweeteners VARCHAR(25) NOT NULL
 );
 
@@ -35,10 +35,10 @@ CREATE TABLE donut (
     cost double NOT NULL,
     date_of_manifacture DATE NOT NULL,
     phone_number VARCHAR(50) NOT NULL,
-    expiry_date DATE NOT NULL,
+    expiry_date VARCHAR(50) NOT NULL,
 	glaze VARCHAR(25) NOT NULL,
-    filling VARCHAR(25) NOT NULL ,  
-    powder VARCHAR(25) NOT NULL, 
+    filling VARCHAR(25) NOT NULL ,
+    powder VARCHAR(25) NOT NULL,
     sweeteners VARCHAR(25) NOT NULL
 );
 
@@ -46,12 +46,12 @@ CREATE TABLE cake(
 	product_cake_id INT AUTO_INCREMENT PRIMARY KEY,
 	product_name VARCHAR(100) NOT NULL,
     cost double NOT NULL,
-    date_of_manifacture DATE NOT NULL,
+    date_of_manifacture VARCHAR(50) NOT NULL,
     phone_number VARCHAR(50) NOT NULL,
-    expiry_date DATE NOT NULL,
+    expiry_date VARCHAR(50) NOT NULL,
 	cream VARCHAR(25) NOT NULL,
-    filling VARCHAR(25) NOT NULL ,  
-    powder VARCHAR(25) NOT NULL, 
+    filling VARCHAR(25) NOT NULL ,
+    powder VARCHAR(25) NOT NULL,
     sweeteners VARCHAR(25) NOT NULL
 );
 
@@ -77,9 +77,9 @@ CREATE TABLE employee (
     coffee_shop_id INT NOT NULL,
     employee_surname VARCHAR(100) NOT NULL,
 	employee_name VARCHAR(100) NOT NULL,
-    emp_position VARCHAR(50) NOT NULL, 
-    arrival_date DATE NOT NULL,
-    departure_date DATE NOT NULL
+    emp_position VARCHAR(50) NOT NULL,
+    arrival_date VARCHAR(50) NOT NULL,
+    departure_date VARCHAR(50) NOT NULL
 );
 
 
