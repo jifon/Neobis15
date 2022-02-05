@@ -1,20 +1,24 @@
 package week3.POJOClasses;
 
-public class Donut extends Dessert {
+public class Donut extends Product{
 
     private Glaze glaze;
+    private Filling filling;
+    private Powder powder;
+    private Sweeteners sweeteners;
 
-    public Donut(Long productID, String name, String dateOfManifacture, String expiryDate, Filling filling, Powder powder, Sweeteners sweeteners, Glaze glaze) {
-        super(productID, name, dateOfManifacture, expiryDate, filling, powder, sweeteners);
-        this.glaze = glaze;
-    }
 
-    public Donut(Glaze glaze) {
+    public Donut(Long productID, String name, String dateOfManifacture, String expiryDate, Glaze glaze, Filling filling, Powder powder, Sweeteners sweeteners) {
+        super(productID, name, dateOfManifacture, expiryDate);
         this.glaze = glaze;
+        this.filling = filling;
+        this.powder = powder;
+        this.sweeteners = sweeteners;
     }
 
     public Donut() {
     }
+
 
     public Glaze getGlaze() {
         return glaze;
@@ -22,5 +26,29 @@ public class Donut extends Dessert {
 
     public void setGlaze(Glaze glaze) {
         this.glaze = glaze;
+    }
+
+    public Filling getFilling() {
+        return filling;
+    }
+
+    public void setFilling(Filling filling) {
+        this.filling = filling;
+    }
+
+    public Powder getPowder() {
+        return powder;
+    }
+
+    public void setPowder(Powder powder) {
+        this.powder = powder;
+    }
+
+    public Sweeteners getSweeteners() {
+        return sweeteners;
+    }
+
+    public void setSweeteners(Sweeteners sweeteners) {
+        this.sweeteners = sweeteners;
     }
 }
