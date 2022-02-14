@@ -1,11 +1,9 @@
-import java.io.IOException;
 import java.sql.*;
 
 public class TestClass {
 
     public static void main(String[] args) throws SQLException {
 
-        getConnection();
         add();
         selectInfo();
         update();
@@ -14,25 +12,44 @@ public class TestClass {
     }
     //Test
     public static Connection getConnection() throws SQLException {
-        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/coffeeShop", "root", "root");
-        System.out.println("Connection is successful to the database!");
-        return connection;
+
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/coffeeShop", "root", "root");
+            System.out.println("Connection is successful to the database!");
+            return connection;
     }
 
     //Insert method
     public static void add() {
+
+        Connection connection = null;
+        PreparedStatement prStm = null;
+
         try {
-            Connection connection = getConnection();
+            connection = getConnection();
             String add = "INSERT INTO `coffee_shop` (`coffee_shop_id`, `coffee_shop_name`, `address`, `phone_number`) VALUES ('1', 'AvenueGrand', 'str. Papinof 35/45', '0555435676');";
-            PreparedStatement addInfo = connection.prepareStatement(add);
-            addInfo.executeUpdate();
-            addInfo.close();
-            connection.close();
+            prStm = connection.prepareStatement(add);
+            prStm.executeUpdate();
             System.out.println("Added");
+
         } catch (SQLException e) {
             e.printStackTrace();
-        }
+        } finally {
+            try {
+                if (prStm != null) {
+                    prStm.close();
+                }
+            } catch (Exception e) {
+                // log this error
+            }
+            try {
+                if (connection != null) {
+                    connection.close();
+                }
+            } catch (Exception e) {
+                // log this error
+            }
 
+        }
     }
 
     public static void selectInfo() throws SQLException {
@@ -48,6 +65,8 @@ public class TestClass {
                 System.out.println( coffee_shop_id + ", " + coffee_shop_name +
                         ", " + address + ", " + phone_number);
             }
+            connection.close();
+            rs.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -59,9 +78,10 @@ public class TestClass {
             String update = "UPDATE coffee_shop SET address = 'str. Papinnof 45/45 ' WHERE coffee_shop_id = 1 ;";
             PreparedStatement updInfo = connection.prepareStatement(update);
             updInfo.execute();
+            System.out.println("Updated");
             updInfo.close();
             connection.close();
-            System.out.println("Updated");
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -72,10 +92,9 @@ public class TestClass {
             String delete = "DELETE FROM coffee_shop WHERE coffee_shop_id = 1;";
             PreparedStatement deletePS = connection.prepareStatement(delete);
             deletePS.execute();
+            System.out.println("Deleted");
             deletePS.close();
             connection.close();
-            System.out.println("Deleted");
-
         } catch (SQLException e) {
             e.printStackTrace();
         }
