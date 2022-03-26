@@ -1,5 +1,0 @@
-package week3.POJOClasses;
-
-public enum Sweeteners {
-    VANILLASUGAR, WHITESUGAR, MAPLESYRUP, HONEY, ARTIFACIALSWEETENERS
-}
