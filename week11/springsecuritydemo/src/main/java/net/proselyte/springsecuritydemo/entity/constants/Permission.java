@@ -1,10 +1,15 @@
 package net.proselyte.springsecuritydemo.entity.constants;
 
 public enum Permission {
-    DEVELOPERS_READ("developers:read"),
-    DEVELOPERS_WRITE("developers:write"),
     PRODUCTS_READ("products:read"),
-    PRODUCTS_WRITE("products:write");
+    PRODUCTS_WRITE("products:write"),
+    USERS_READ("users:read"),
+    USERS_WRITE("users:write"),
+    ORDERS_READ("orders:read"),
+    ORDERS_WRITE("orders:write"),
+    CATEGORIES_READ("categories:read"),
+    CATEGORIES_WRITE("categories:write");
+
 
     private final String permission;
 
