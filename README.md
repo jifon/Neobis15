@@ -1,4 +1,4 @@
-# Uri
+
 # Kyzzhibek Orozbekova
 
 
