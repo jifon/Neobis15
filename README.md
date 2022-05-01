@@ -1,5 +1,5 @@
 # Uri
-# Uri
+# Kyzzhibek Orozbekova
 
 
 **date of creation: 11.01.2022**
